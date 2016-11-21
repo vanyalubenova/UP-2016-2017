@@ -15,7 +15,7 @@ int main()
 	{
 		for (int j = 0; j < cows; j++)
 		{
-			cout << "arr[i][j] = ";
+			cout << "arr[" << i << "][" << j << "] = ";
 			cin >> arr[i][j];			
 		}
 	}
