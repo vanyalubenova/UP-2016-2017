@@ -13,7 +13,7 @@ void initArray(double *array, int n)
 		cin >> array[i];
 	}
 }
-double lastAverage(double *array, int n)
+int lastAverage(double *array, int n)
 {
 	int last = -1;
 	for (int i = 0; i < n; i++)
