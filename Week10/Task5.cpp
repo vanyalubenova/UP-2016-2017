@@ -12,7 +12,7 @@ void deleteVowels(char *string1, char *string2)
 	int j = 0;
 	for (int i = 0; string1[i] != 0; i++)
 	{
-		if ((int)string1[i] >= 65 && string1[i] <= 90) || ((int)string1[i] >= 97 && string1[i] <= 122))
+		if ((int)string1[i] >= 65 && (int)string1[i] <= 90) || ((int)string1[i] >= 97 && (int)string1[i] <= 122))
 		{
 		if (string1[i] != 'a' && string1[i] != 'e' && string1[i] != 'i' && string1[i] != 'o' && string1[i] != 'u')
 		{
