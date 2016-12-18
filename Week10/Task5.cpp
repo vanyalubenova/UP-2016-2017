@@ -8,28 +8,30 @@ using namespace std;
 
 void deleteVowels(char *string)
 {
-	int count = 0;
+	int count1 = 0;
 	int count2 = 0;
-	for (int i = 0; string[i] != 0; i++)
+	while (string[count1]!= 0)
+	{
+		count1++;
+	}
+	for (int i = 0; string[i]!= 0; i++)
 	{
 	
 		if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u')
 		{
 
-			for (int j = i; j < n - 1; j++)
+			for (int j = i; j < count1; j++)
 			{
 				string[j] = string[j + 1];
 			}
-			count1++;
+			count2++;
 		}
-		count2++;
+		
 	}
-	for (int i = 0; i < count2 - count1 ; i++)
+	for (int i = 0; i < count1 - count2; i++)
 	{
 		cout << string[i];
 	}
-
-
 }
 int main()
 {
