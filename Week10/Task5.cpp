@@ -6,34 +6,36 @@
 
 using namespace std;
 
-void deleteVowels(char *string1, char *string2)
+void deleteVowels(char *string)
 {
 	int count = 0;
-	int j = 0;
-	for (int i = 0; string1[i] != 0; i++)
+	int count2 = 0;
+	for (int i = 0; string[i] != 0; i++)
 	{
-		if ((int)string1[i] >= 65 && (int)string1[i] <= 90) || ((int)string1[i] >= 97 && (int)string1[i] <= 122))
+	
+		if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u')
 		{
-		if (string1[i] != 'a' && string1[i] != 'e' && string1[i] != 'i' && string1[i] != 'o' && string1[i] != 'u')
-		{
-			string2[j] = string1[i];
-			j++;
-			count++;
+
+			for (int j = i; j < n - 1; j++)
+			{
+				string[j] = string[j + 1];
+			}
+			count1++;
 		}
-		}
+		count2++;
 	}
-	for (int i = 0; i < count; i++)
+	for (int i = 0; i < count2 - count1 ; i++)
 	{
-		cout << string2[i];
+		cout << string[i];
 	}
 
 
 }
 int main()
 {
-	char string1[100];
-	cin >> string1;
-	char string2[100];
-	deleteVowels(string1, string2);
+	char string[100];
+	cin >> string;
+	
+	deleteVowels(string);
 	return 0;
 }

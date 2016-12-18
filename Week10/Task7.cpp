@@ -23,12 +23,18 @@ bool deleteElements(int *array, int n, int number)
 		{
 			for (int j = i; j < n - 1; j++)
 			{
-				array[j] == array[i + 1];
+				array[j] = array[j + 1];
 			}
 			count++;
 		}
 	}
-	if (count)
+	for (int i = 0; i < n - count; i++)
+	{
+		cout << array[i];
+	}
+	cout << endl;
+
+	if (count != 0)
 	{
 		return true;
 	}
@@ -44,7 +50,7 @@ int main()
 	int number;
 	cin >> number;
 	bool existElement = deleteElements(array, n, number);
-	cout << existElement;
-    return 0;
-}
 
+	cout << existElement;
+	return 0;
+}
