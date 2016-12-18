@@ -5,15 +5,7 @@
 #include <iostream>
 
 using namespace std;
-int Pow(int a, int b)
-{
-	int var = 1;
-	for (int i = 0; i < b; i++)
-	{
-		var *= a;
-	}
-	return var;
-}
+
 void initArray(int *array, int n)
 {
 	for (int i = 0; i < n; i++)
