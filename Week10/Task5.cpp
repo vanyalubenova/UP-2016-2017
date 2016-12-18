@@ -35,7 +35,5 @@ int main()
 	cin >> string1;
 	char string2[100];
 	deleteVowels(string1, string2);
-
-
 	return 0;
 }
