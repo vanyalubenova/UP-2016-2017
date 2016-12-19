@@ -1,5 +1,4 @@
-// Task8.cpp : Defines the entry point for the console application.
-//
+
 
 #include "stdafx.h"
 #include <iostream>
@@ -16,21 +15,30 @@ void initArray(int *array, int n)
 }
 int *returnPointer(int *array, int n, int number)
 {
-	for (int i = 0; i < n; i++)
+	int min = 0;
+	int max = n - 1;
+	int mid;
+
+	while (min <= max)
 	{
-		int count = 0;
-		int bineryNum = 0;
-		while (number != 0) {
-			bineryNum += (array[i] % 2) * pow(10, count);
+		mid = (min + max) / 2;
+		if (array[mid] < number)
+		{
+			min = mid + 1;
+		}
+		else if (array[mid] > number)
+		{
+			max = mid - 1;
+		}
+		else
+		{
+			return &array[mid];
 		}
 
-		if (array[i] == bineryNum)
-		{
-			return array + i;
-			break;
-		}
 	}
+	return NULL;
 }
+
 int main()
 {
 	int array[100];
@@ -38,7 +46,10 @@ int main()
 	cin >> n;
 	initArray(array, n);
 	cin >> number;
-	returnPointer(array, n, number);
-    return 0;
+	int *result = returnPointer(array, n, number);
+	cout << result;
+	return 0;
 }
+
+
 
