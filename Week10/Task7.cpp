@@ -14,7 +14,7 @@ void initArray(int *array, int n)
 		cin >> array[i];
 	}
 }
-bool deleteElements(int *array, int n, int number)
+bool deleteElements(int *array, int& n, int number)
 {
 	int count = 0;
 	for (int i = 0; i < n; i++)
@@ -39,6 +39,10 @@ bool deleteElements(int *array, int n, int number)
 		return true;
 	}
 	else
+	{
+		n - count;
+		return false;
+	}
 		return false;
 }
 int main()
